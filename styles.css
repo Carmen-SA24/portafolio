@@ -1,0 +1,155 @@
+/* ------------------------------------------------ */
+/* 1. VARIABLES Y RESET DE COLORES */
+/* ------------------------------------------------ */
+:root {
+    /* Paleta de Colores */
+    --color-primario: #54c0eb;     /* Azul/Cian vibrante para botones/enlaces */
+    --color-secundario: #612482;   /* Azul oscuro para fondo de header/footer */
+    --color-texto: #333;           /* Texto oscuro principal */
+    --color-fondo-claro: #f4f4f4;  /* Fondo para secciones claras */
+    --color-blanco: #ffffff;
+}
+
+/* Reset Básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: var(--color-texto);
+}
+
+/* Contenedor central para limitar el ancho */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ------------------------------------------------ */
+/* 2. LAYOUT Y SECCIONES */
+/* ------------------------------------------------ */
+
+/* Colores de las secciones para diferenciar el fondo */
+.seccion-principal {
+    background-color: var(--color-blanco);
+    padding: 60px 0;
+}
+
+.seccion-clara {
+    background-color: var(--color-fondo-claro);
+    padding: 40px 0;
+}
+
+/* ------------------------------------------------ */
+/* 3. HEADER Y NAVEGACIÓN */
+/* ------------------------------------------------ */
+header {
+    /* Define el color del texto de la cabecera */
+    color: var(--color-blanco);
+    
+    /* Degradado lineal de arriba a abajo */
+    background: var(--color-secundario); /* Color de respaldo si el degradado falla */
+    background: linear-gradient(
+        to bottom, 
+        /* Comienza con el azul oscuro (secundario) */
+        var(--color-secundario) 0%, 
+        /* Termina con un azul aún más oscuro */
+        #1a242f 100% 
+    );
+}
+header .container {
+    display: flex;
+    justify-content: space-between; /* Título a la izquierda, nav a la derecha */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px; /* Espacio entre los enlaces */
+}
+
+nav a {
+    color: var(--color-blanco);
+    text-decoration: none; /* Quitar el subrayado */
+    font-weight: bold;
+}
+
+/* ------------------------------------------------ */
+/* 4. ACERCA DE MÍ Y BOTONES */
+/* ------------------------------------------------ */
+#acerca {
+    text-align: center;
+}
+
+.boton-principal {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.boton-principal:hover {
+    background-color: #612482; /* Un tono más claro al pasar el ratón */
+}
+
+/* ------------------------------------------------ */
+/* 5. HABILIDADES (Flexbox) */
+/* ------------------------------------------------ */
+.contenedor-habilidades {
+    display: flex;
+    justify-content: space-around; /* Distribuye las tarjetas uniformemente */
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    background-color: var(--color-blanco);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 200px; /* Permite que las tarjetas crezcan y se ajusten */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------ */
+/* 6. PROYECTOS (Flexbox) */
+/* ------------------------------------------------ */
+.contenedor-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.proyecto {
+    background-color: var(--color-fondo-claro);
+    padding: 20px;
+    border-left: 5px solid var(--color-primario);
+    flex: 1 1 calc(50% - 30px); /* Dos proyectos por fila en pantallas grandes */
+}
+
+/* ------------------------------------------------ */
+/* 7. FOOTER Y CONTACTO */
+/* ------------------------------------------------ */
+footer {
+    text-align: center;
+    background-color: var(--color-secundario);
+    color: var(--color-fondo-claro);
+    padding: 20px 0;
+}
+
+footer a {
+    color: var(--color-primario);
+    text-decoration: none;
+    margin: 0 10px;
+}
