@@ -964,3 +964,12 @@ textarea:focus {
 .btn-gradient:hover {
   transform: translateY(-3px) scale(1.03);
 }
+/* Estilos para los placeholder */
+::placeholder {
+  color: #aaa; /* un gris visible */
+  opacity: 1;  /* para que no se vea transparente */
+}
+
+.light-mode ::placeholder {
+  color: #666; /* un gris más oscuro en modo claro */
+}
