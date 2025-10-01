@@ -1,78 +1,341 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio con Colores</title>
+    <title>Desarrollador Frontend</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <span class="logo-text">ASIR</span>
+            </a>
 
-    <header>
-        <div class="container">
-            <h1>Carmen Salirrosas</h1>
-            <nav>
-                <ul>
-                    <li><a href="#acerca">Acerca</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#explore" class="nav-link">
+                        <i class="fas fa-compass"></i>
+                        Explorar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">
+                        <i class="fas fa-layer-group"></i>
+                        Proyectos
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-palette"></i>
+                            Herramientas de Diseño
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-code"></i>
+                            Desarrollo
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-chart-bar"></i>
+                            Analíticas
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#community" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        Comunidad
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn btn-login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Iniciar Sesión
+                </button>
+                <button class="btn btn-signup">
+                    <i class="fas fa-user-plus"></i>
+                    Registrarse
+                </button>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </header>
 
-    <section id="acerca" class="seccion-principal">
-        <div class="container">
-            <h2>¡Hola! Soy un Desarrollador.</h2>
-            <p>
-                Me especializo en crear soluciones web con un enfoque en el rendimiento y la experiencia del usuario. 
-                Tengo experiencia con el stack de Docker y VPS.
+        <!-- Menú Móvil -->
+        <div class="mobile-menu">
+            <a href="#home" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                Inicio
+            </a>
+            <a href="#explore" class="mobile-nav-link">
+                <i class="fas fa-compass"></i>
+                Explorar
+            </a>
+            <a href="#projects" class="mobile-nav-link">
+                <i class="fas fa-layer-group"></i>
+                Proyectos
+            </a>
+            <a href="#community" class="mobile-nav-link">
+                <i class="fas fa-users"></i>
+                Comunidad
+            </a>
+            <a href="#contact" class="mobile-nav-link">
+                <i class="fas fa-envelope"></i>
+                Contacto
+            </a>
+            <div class="mobile-actions">
+                <button class="btn btn-login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Iniciar Sesión
+                </button>
+                <button class="btn btn-signup">
+                    <i class="fas fa-user-plus"></i>
+                    Registrarse
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <!-- Contenido Izquierdo -->
+            <div class="hero-content">
+                <h1>Hola, soy Carmen</h1>
+                <p>
+                    Una apasionada Desarrolladora Frontend.
+                    Creo experiencias web rápidas, modernas y atractivas con
+                    <strong>HTML, CSS, JavaScript y React</strong>.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Ver Portafolio</button>
+                    <button class="btn btn-outline">Contáctame</button>
+                </div>
+            </div>
+
+            <!-- Imagen Derecha -->
+            <div class="hero-image">
+                <img src="image/main.png" alt="Portafolio Hero">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Explorar -->
+    <section class="explore" id="explore">
+        <div class="explore-container">
+            <h2 class="explore-title">Explora Mi Portafolio</h2>
+            <p class="explore-subtitle">
+                Descubre mi trabajo, habilidades y trayectoria como desarrolladora 🚀
             </p>
-            <a href="#proyectos" class="boton-principal">Ver Proyectos</a>
-        </div>
-    </section>
 
-    <section id="habilidades" class="seccion-clara">
-        <div class="container">
-            <h2>Mis Habilidades</h2>
-            <div class="contenedor-habilidades">
-                <div class="skill-card">HTML & CSS (Flexbox/Grid)</div>
-                <div class="skill-card">JavaScript (React/Vue)</div>
-                <div class="skill-card">Docker & Contenedores</div>
-                <div class="skill-card">Bases de Datos (SQL/NoSQL)</div>
+            <div class="explore-grid">
+                <!-- Tarjeta 1 -->
+                <div class="explore-card">
+                    <div class="icon">💻</div>
+                    <h3>Proyectos</h3>
+                    <p>Mira mis últimos proyectos de desarrollo web con interfaz moderna y funcionalidad completa.</p>
+                    <a href="#" class="explore-btn">Ver Proyectos →</a>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="explore-card">
+                    <div class="icon">⚡</div>
+                    <h3>Habilidades</h3>
+                    <p>Explora mi stack técnico incluyendo HTML, CSS, JavaScript, React y más.</p>
+                    <a href="#" class="explore-btn">Ver Habilidades →</a>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="explore-card">
+                    <div class="icon">👨‍💻</div>
+                    <h3>Sobre Mí</h3>
+                    <p>Conoce más sobre mi trayectoria, pasión por la programación y mis metas como desarrolladora.</p>
+                    <a href="#" class="explore-btn">Leer Más →</a>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="explore-card">
+                    <div class="icon">📩</div>
+                    <h3>Contacto</h3>
+                    <p>¿Tienes un proyecto o colaboración en mente? ¡Pongámonos en contacto hoy!</p>
+                    <a href="#" class="explore-btn">Contáctame →</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="proyectos" class="seccion-principal">
-        <div class="container">
-            <h2>Trabajos Recientes</h2>
-            <div class="contenedor-proyectos">
-                <article class="proyecto">
-                    <h3>Proyecto Dockerizado</h3>
-                    <p>Una aplicación full-stack alojada en un VPS con contenedores Docker.</p>
-                    <a href="#" target="_blank">Ver Código</a>
-                </article>
-                <article class="proyecto">
-                    <h3>Landing Page Moderna</h3>
-                    <p>Diseño totalmente responsivo con animaciones CSS.</p>
-                    <a href="#" target="_blank">Ver Demo</a>
-                </article>
+    <!-- Sección Proyectos -->
+    <section class="projects">
+        <div class="projects-container">
+            <h2 class="projects-title">Mis Proyectos</h2>
+            <p class="projects-subtitle">Algunos de mis trabajos recientes usando HTML, CSS, JavaScript y React</p>
+
+            <div class="projects-grid">
+                <!-- Tarjeta Proyecto 1 -->
+                <div class="project-card">
+                    <img src="image/Portfolio_Website.jpg" alt="Proyecto 1">
+                    <div class="project-content">
+                        <h3>Sitio Web de Portafolio</h3>
+                        <p>Un sitio web personal responsive con interfaz moderna, animaciones y modo oscuro/claro.</p>
+                        <a href="#" class="project-btn">Ver Proyecto →</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Proyecto 2 -->
+                <div class="project-card">
+                    <img src="image/E-commerce_Store.jpg" alt="Proyecto 2">
+                    <div class="project-content">
+                        <h3>Tienda E-commerce</h3>
+                        <p>Un sitio de comercio electrónico completo con filtros de productos, diseño responsive y animaciones suaves.</p>
+                        <a href="#" class="project-btn">Ver Proyecto →</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Proyecto 3 -->
+                <div class="project-card">
+                    <img src="image/React_Dashboard.jpg" alt="Proyecto 3">
+                    <div class="project-content">
+                        <h3>Panel en React</h3>
+                        <p>Un dashboard moderno en React con gráficos, estadísticas e interfaz amigable.</p>
+                        <a href="#" class="project-btn">Ver Proyecto →</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Proyecto 4 -->
+                <div class="project-card">
+                    <img src="image/online-blog.jpg" alt="Proyecto 4">
+                    <div class="project-content">
+                        <h3>Plataforma de Blog</h3>
+                        <p>Una plataforma de blogs limpia con diseño responsive, tema oscuro/claro y función de comentarios.</p>
+                        <a href="#" class="project-btn">Ver Proyecto →</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contacto" class="seccion-clara">
-        <div class="container">
-            <h3>¿Hablamos?</h3>
-            <p>Email: tu.email@ejemplo.com | Teléfono: +34 123 456 789</p>
-            <div class="redes">
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
+    <!-- Sección Comunidad -->
+    <section class="community" id="community">
+        <div class="community-container">
+            <h2 class="community-title">Únete a Mi Comunidad</h2>
+            <p class="community-subtitle">
+                Conéctate, colabora y sigue mi trayectoria en diferentes plataformas 🚀
+            </p>
+
+            <div class="community-grid">
+                <!-- Tarjeta 1 -->
+                <div class="community-card">
+                    <div class="icon">🐙</div>
+                    <h3>GitHub</h3>
+                    <p>Mira mis proyectos de código abierto y contribuciones a la comunidad de desarrolladores.</p>
+                    <a href="#" class="community-btn">Seguir →</a>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="community-card">
+                    <div class="icon">💼</div>
+                    <h3>LinkedIn</h3>
+                    <p>Conéctate profesionalmente y ve mi experiencia laboral y logros.</p>
+                    <a href="#" class="community-btn">Conectar →</a>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="community-card">
+                    <div class="icon">🎥</div>
+                    <h3>YouTube</h3>
+                    <p>Mira tutoriales de programación, walkthroughs de proyectos y sesiones de codificación en vivo.</p>
+                    <a href="#" class="community-btn">Suscribirse →</a>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="community-card">
+                    <div class="icon">🐦</div>
+                    <h3>Twitter</h3>
+                    <p>Sigue para actualizaciones, consejos y debates interesantes para desarrolladores.</p>
+                    <a href="#" class="community-btn">Seguir →</a>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
 
+    <!-- Sección Contacto -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">Trabajemos Juntos</h2>
+            <p class="contact-subtitle">
+                ¿Tienes una idea de proyecto o solo quieres saludar? ¡Contáctame! 🚀
+            </p>
+
+            <div class="contact-grid">
+                <!-- Izquierda: Info de Contacto -->
+                <div class="contact-info-card">
+                    <h3>Información de Contacto</h3>
+                    <p>No dudes en comunicarte por correo, teléfono o redes sociales.</p>
+
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                       <p>Huércal-Overa, Almería, España</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">✉️</span>
+                         <p>cssalavi871@g.educaand.es</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📞</span>
+                        <p>+34 612 345 6784</p>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-btn">🐙 GitHub</a>
+                        <a href="#" class="social-btn">💼 LinkedIn</a>
+                        <a href="#" class="social-btn">🎥 YouTube</a>
+                        <a href="#" class="social-btn">🐦 Twitter</a>
+                    </div>
+                </div>
+
+                <!-- Derecha: Formulario de Contacto -->
+                <div class="contact-form-card">
+                    <h3>Envíame un Mensaje</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Tu Nombre" required>
+                            <input type="email" placeholder="Tu Correo" required>
+                        </div>
+                        <textarea placeholder="Tu Mensaje" rows="6" required></textarea>
+                        <button type="submit" class="btn btn-gradient">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
