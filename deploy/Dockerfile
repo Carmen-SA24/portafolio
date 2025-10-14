@@ -5,5 +5,5 @@ FROM httpd:2.4
 # debemos consultar el docker hub (imagen) para ver variables de entorno directorios de trabajo etc etc
 # Directorio de trabajo dentro del contenedor
 WORKDIR /usr/local/apache2/htdocs
-COPY ../src .
+COPY ./src .
 EXPOSE 80
