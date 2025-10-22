@@ -12,7 +12,7 @@ net-tools iputils-ping
 # comandos interactivos (piden datos por terminal)
 # comandos por lote (datos los ponemos como parametros del comando)
 RUN useradd -rm -d /home/rosa -s /bin/bash rosa
-RUN echo "1234:rosa" | chpasswd
+RUN echo "rosa:1234" | chpasswd
 RUN echo "Bienvenida Rosa a la empresa" > /home/rosa/hello.txt
 
 # debemos consultar el docker hub (imagen) para ver variables de entorno directorios de trabajo etc etc
