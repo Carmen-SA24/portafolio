@@ -1,6 +1,19 @@
 # Partimos de una iamgen bash de ubuntu donde instalaremos apache . configuraremos y arrancaremos
 FROM ubuntu
-RUN apt update && apt install -yq --no-install-recommends \ apache2 \ nano \ curl \ net-tools iputils-ping
+# RUN apt update && apt install -yq --no-install-recommends \ apache2 \ nano \ curl \ net-tools iputils-ping
+# **** Instalaciones *****
+RUN apt update && apt install -yq --no-install-recommends \ 
+apache2 \ 
+nano \ 
+curl \ 
+net-tools iputils-ping
+
+# **** Creacion de usuario *****
+# comandos interactivos (piden datos por terminal)
+# comandos por lote (datos los ponemos como parametros del comando)
+RUN useradd -rm -d /home/rosa -s /bin/bash rosa
+RUN echo "1234:rosa" | chpasswd
+RUN echo "Bienvenida Rosa a la empresa" > /home/rosa/hello.txt
 
 # debemos consultar el docker hub (imagen) para ver variables de entorno directorios de trabajo etc etc
 # Directorio de trabajo dentro del contenedor
