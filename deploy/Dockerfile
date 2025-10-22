@@ -1,9 +1,11 @@
-# Archivo donde especificque la instalacion de librerias y configuraciones a la 
-# 1-.partimos de una imagen de Dcoker con apache instalado
-# FROM ubuntu + instalacion personal de Apache
-FROM httpd:2.4
+# Partimos de una iamgen bash de ubuntu donde instalaremos apache . configuraremos y arrancaremos
+FROM ubuntu
+RUN apt update && apt install -yq --no-install-recommends \ apache2 \ libapache2-mod-php7.2 \ nano \ curl \ net-tools iputils-ping
+
 # debemos consultar el docker hub (imagen) para ver variables de entorno directorios de trabajo etc etc
 # Directorio de trabajo dentro del contenedor
-WORKDIR /usr/local/apache2/htdocs
+WORKDIR /var/www/html
+# El directorio . es relativo  al contexto del docker
 COPY ./src .
 EXPOSE 80
+CMD apachectl -DFOREGROUND
