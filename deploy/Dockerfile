@@ -1,5 +1,7 @@
 # Partimos de una iamgen bash de ubuntu donde instalaremos apache . configuraremos y arrancaremos
 FROM ubuntu
+ARG USUARIO
+ARG PASSWORD
 # RUN apt update && apt install -yq --no-install-recommends \ apache2 \ nano \ curl \ net-tools iputils-ping
 # **** Instalaciones *****
 RUN apt update && apt install -yq --no-install-recommends \ 
@@ -7,6 +9,10 @@ apache2 \
 nano \ 
 curl \ 
 net-tools iputils-ping
+
+# Cnofiguracion  base
+
+# Configuracion del servicio
 
 # **** Creacion de usuario *****
 # comandos interactivos (piden datos por terminal)
